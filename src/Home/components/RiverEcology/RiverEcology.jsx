@@ -2,13 +2,12 @@ import React from 'react';
 import { Row, Col } from 'antd';
 import Texty from 'rc-texty';
 import 'rc-texty/assets/index.css';
-import { Parallax, OverPack } from 'rc-scroll-anim';
-import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
+// import { Parallax, OverPack } from 'rc-scroll-anim';
+// import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
+// import TweenOne from 'rc-tween-one';
 import './less/RiverEcology.less';
-import Slide from '../Slide/Slide';
-// import { isImg } from './utils';
+// import Slide from '../Slide/Slide';
 
 class RiverEcology extends React.Component {
   constructor(props) {

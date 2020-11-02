@@ -1,21 +1,22 @@
-import React, { ReactDOM } from 'react';
+import React from 'react';
 import { Row, Col } from 'antd';
 import Texty from 'rc-texty';
 import 'rc-texty/assets/index.css';
-import { Parallax, OverPack  } from 'rc-scroll-anim';
-import ScrollParallax  from 'rc-scroll-anim/lib/ScrollParallax';
+import { Parallax } from 'rc-scroll-anim'; // OverPack
+// import ScrollParallax  from 'rc-scroll-anim/lib/ScrollParallax';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
+// import TweenOne from 'rc-tween-one';
 import './less/Adec.less';
 import Slide from '../Slide/Slide';
+
 // import { isImg } from './utils';
 
 class Adec extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = {
-      show: true,
-    };
+    // this.state = {
+    //   show: true,
+    // };
     this.imgArr = [
       { name: 'middle', src: `${require('../../../img/hope_1.png')}` },
       { name: 'end', src: `${require('../../../img/hope_4.png')}` },
@@ -59,7 +60,7 @@ class Adec extends React.PureComponent {
             </Row>
             <div key="box" className="box">
               <QueueAnim duration={600} type="bottom">
-                {/*{children}*/}
+                {}
               </QueueAnim>
             </div>
           </QueueAnim>
@@ -127,7 +128,7 @@ class Adec extends React.PureComponent {
           </Row>
           <Row show="true" justify="center">
             <Col span={16}>
-              <Parallax animation={[{opacity: 0.1, x: -100, rotate: 0}, {opacity: 1, x: 100, rotate: '100deg', type: 'from'}]}>
+              <Parallax animation={[{ opacity: 0.1, x: -100, rotate: 0 }, { opacity: 1, x: 100, rotate: '100deg', type: 'from' }]}>
                 <QueueAnim key="queueAnim">
                   <p className="t-a-c team-row-p">
                     截至2020年7月，亚洲数字经济合作组织已有超过40个成员节点。每个成员单位均已质押了1000万AT（1 AT= 1 RMB），由新加坡矩阵世界基金会（Matrix World
@@ -142,26 +143,26 @@ class Adec extends React.PureComponent {
                     目前可披露的联合发起节点共同组成执行委员会，分别如下：
                   </p>
                 </QueueAnim>
-              </Parallax >
+              </Parallax>
             </Col>
           </Row>
           <Row className="row-p team-company" justify="center">
             <Col span={13}>
               <Row justify="center">
                 <Col span={4}>
-                  <img src={require('../../../img/team1.png')} alt=""/>
+                  <img src={require('../../../img/team1.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img src={require('../../../img/team2.png')} alt=""/>
+                  <img src={require('../../../img/team2.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img src={require('../../../img/team3.png')} alt=""/>
+                  <img src={require('../../../img/team3.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img src={require('../../../img/team4.png')} alt=""/>
+                  <img src={require('../../../img/team4.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img src={require('../../../img/team5.png')} alt=""/>
+                  <img src={require('../../../img/team5.png')} alt="" />
                 </Col>
               </Row>
             </Col>
@@ -170,19 +171,19 @@ class Adec extends React.PureComponent {
             <Col span={13}>
               <Row justify="center" className="team-company-content">
                 <Col span={4}>
-                  <img src={require('../../../img/team6.png')} alt=""/>
+                  <img src={require('../../../img/team6.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img src={require('../../../img/team7.png')} alt=""/>
+                  <img src={require('../../../img/team7.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img src={require('../../../img/team8.png')} alt=""/>
+                  <img src={require('../../../img/team8.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img src={require('../../../img/team9.png')} alt=""/>
+                  <img src={require('../../../img/team9.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img src={require('../../../img/team10.png')} alt=""/>
+                  <img src={require('../../../img/team10.png')} alt="" />
                 </Col>
               </Row>
             </Col>
@@ -210,7 +211,7 @@ class Adec extends React.PureComponent {
           <Row show="true" className="row-content t-a-c" justify="center">
             <h1>
               <Parallax
-                animation={{  }} // x: '100px'
+                animation={{}} // x: '100px'
                 style={{ marginTop: 64 }}
               >
                 <Texty>基本职能</Texty>
@@ -221,19 +222,19 @@ class Adec extends React.PureComponent {
             <Col span={17}>
               <Row justify="space-between">
                 <Col span={4}>
-                  <img className="basic-pic" src={require('../../../img/basic1.png')} alt=""/>
+                  <img className="basic-pic" src={require('../../../img/basic1.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img className="basic-pic" src={require('../../../img/basic2.png')} alt=""/>
+                  <img className="basic-pic" src={require('../../../img/basic2.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img className="basic-pic" src={require('../../../img/basic3.png')} alt=""/>
+                  <img className="basic-pic" src={require('../../../img/basic3.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img className="basic-pic" src={require('../../../img/basic4.png')} alt=""/>
+                  <img className="basic-pic" src={require('../../../img/basic4.png')} alt="" />
                 </Col>
                 <Col span={4}>
-                  <img className="basic-pic" src={require('../../../img/basic5.png')} alt=""/>
+                  <img className="basic-pic" src={require('../../../img/basic5.png')} alt="" />
                 </Col>
               </Row>
             </Col>
@@ -254,13 +255,13 @@ class Adec extends React.PureComponent {
             <Col span={18}>
               <Row justify="space-between">
                 <Col span={8}>
-                  <img className="strategy-pic" src={require('../../../img/strategy1.png')} alt=""/>
+                  <img className="strategy-pic" src={require('../../../img/strategy1.png')} alt="" />
                 </Col>
                 <Col span={8}>
-                  <img className="strategy-pic" src={require('../../../img/strategy2.png')} alt=""/>
+                  <img className="strategy-pic" src={require('../../../img/strategy2.png')} alt="" />
                 </Col>
                 <Col span={8}>
-                  <img className="strategy-pic" src={require('../../../img/strategy3.png')} alt=""/>
+                  <img className="strategy-pic" src={require('../../../img/strategy3.png')} alt="" />
                 </Col>
               </Row>
             </Col>
@@ -269,13 +270,13 @@ class Adec extends React.PureComponent {
             <Col span={18}>
               <Row justify="space-between">
                 <Col span={8}>
-                  <img className="strategy-pic" src={require('../../../img/strategy4.png')} alt=""/>
+                  <img className="strategy-pic" src={require('../../../img/strategy4.png')} alt="" />
                 </Col>
                 <Col span={8}>
-                  <img className="strategy-pic" src={require('../../../img/strategy5.png')} alt=""/>
+                  <img className="strategy-pic" src={require('../../../img/strategy5.png')} alt="" />
                 </Col>
                 <Col span={8}>
-                  <img className="strategy-pic" src={require('../../../img/strategy6.png')} alt=""/>
+                  <img className="strategy-pic" src={require('../../../img/strategy6.png')} alt="" />
                 </Col>
               </Row>
             </Col>

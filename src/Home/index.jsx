@@ -5,12 +5,12 @@ import { enquireScreen } from 'enquire-js';
 
 import Nav0 from './Nav0';
 import Content from './Content';
-import Teams1 from './Teams1';
+// import Teams1 from './Teams1';
 
-import { Nav00DataSource, Teams10DataSource } from './data.source';
+import { Nav00DataSource } from './data.source';
 import './less/antMotionStyle.less';
-import Bg from "./components/bg/Bg";
-import {Element} from "rc-banner-anim";
+import Bg from './components/bg/Bg';
+// import {Element} from "rc-banner-anim";
 
 let isMobile;
 enquireScreen((b) => {
@@ -68,7 +68,7 @@ export default class Home extends React.Component {
         key="Content"
         ref={ref => this.ref = ref}
       />,
-      <Bg key="bg" context={this.getNode}/>
+      <Bg key="bg" context={this.getNode} />,
     ];
     return (
       <div

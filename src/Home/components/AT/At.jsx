@@ -1,14 +1,14 @@
 import React from 'react';
-import { Row, Col, Space } from 'antd';
+import { Row, Col } from 'antd';
 import Texty from 'rc-texty';
 import 'rc-texty/assets/index.css';
-import { Parallax, OverPack } from 'rc-scroll-anim';
-import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
+// import { Parallax, OverPack } from 'rc-scroll-anim';
+// import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
+import require from 'enquire-js';
+// import TweenOne from 'rc-tween-one';
 import './less/At.less';
-import Slide from '../Slide/Slide';
-// import { isImg } from './utils';
+// import Slide from '../Slide/Slide';
 
 class At extends React.Component {
   constructor(props) {
@@ -198,13 +198,13 @@ class At extends React.Component {
             <Col span={15}>
               <Row className="row-p" justify="space-between">
                 <Col span={8} className="t-a-c">
-                  <img className="first-pic t-a-c" src={require('../../../img/first1.png')} alt=""/>
+                  <img className="first-pic t-a-c" src={require('../../../img/first1.png')} alt="" />
                 </Col>
                 <Col span={8} className="t-a-c">
-                  <img className="first-pic" src={require('../../../img/first2.png')} alt=""/>
+                  <img className="first-pic" src={require('../../../img/first2.png')} alt="" />
                 </Col>
                 <Col span={8} className="t-a-c">
-                  <img className="first-pic" src={require('../../../img/first3.png')} alt=""/>
+                  <img className="first-pic" src={require('../../../img/first3.png')} alt="" />
                 </Col>
               </Row>
 

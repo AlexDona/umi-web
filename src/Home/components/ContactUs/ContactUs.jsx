@@ -2,13 +2,12 @@ import React from 'react';
 import { Row, Col, Space, Popover } from 'antd';
 import Texty from 'rc-texty';
 import 'rc-texty/assets/index.css';
-import { Parallax, OverPack } from 'rc-scroll-anim';
-import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
+// import { Parallax, OverPack } from 'rc-scroll-anim';
+// import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
 import QueueAnim from 'rc-queue-anim';
-import TweenOne from 'rc-tween-one';
+// import TweenOne from 'rc-tween-one';
 import './less/ContactUs.less';
 import Slide from '../Slide/Slide';
-// import { isImg } from './utils';
 
 class ContactUs extends React.Component {
   constructor(props) {
@@ -29,7 +28,7 @@ class ContactUs extends React.Component {
       { name: 'normal', src: `${require('../../../img/contact6.jpg')}` },
       { name: 'normal', src: `${require('../../../img/contact7.jpg')}` },
       { name: 'start', src: `${require('../../../img/contact8.jpg')}` },
-    ]
+    ];
     // [
     //   'mouseOver',
     //   'mouseOut',
@@ -76,13 +75,15 @@ class ContactUs extends React.Component {
           </Row>
           <Row justify="center">
             <Col span={15}>
-              <h5 className="t-a-c">电话：86）0755-888-888
+              <h5 className="t-a-c">
+                电话：86）0755-888-888
               </h5>
             </Col>
           </Row>
           <Row justify="center" className="email">
             <Col span={15}>
-              <h5 className="t-a-c">邮箱：info@dgt.asia
+              <h5 className="t-a-c">
+                邮箱：info@dgt.asia
               </h5>
             </Col>
           </Row>
@@ -114,13 +115,13 @@ class ContactUs extends React.Component {
                 <div className="link-title">关注我们</div>
                 <div className="links row-p">
                   <Space size="middle">
-                    <a href="https://twitter.com/home?lang=en" target="_blank"><img className="link-icons" src={require('../../../img/icons/twiter.png')} alt=""/></a>
-                    <a href="https://www.linkedin.com/company/%E4%BA%9A%E6%B4%B2%E6%95%B0%E5%AD%97%E7%BB%8F%E6%B5%8E%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87" target="_blank"><img className="link-icons" src={require('../../../img/icons/instagram.png')} alt=""/></a>
-                    <a href="https://weibo.com/7508227359/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank"><img className="link-icons" src={require('../../../img/icons/weibo.png')} alt=""/></a>
-                    <a href="https://www.zhihu.com/org/ya-zhou-shu-zi-jing-ji-he-zuo-zu-zhi" target="_blank"><img className="link-icons" src={require('../../../img/icons/zhihu.png')} alt=""/></a>
-                    <a href="https://www.quora.com/profile/ADEC-A" target="_blank"><img className="link-icons" src={require('../../../img/icons/Quora.png')} alt=""/></a>
-                    <Popover content={(<div className="link-qrcode" style={{backgroundImage: `url(${require('../../../img/icons/link_qr.png')})`}}></div>)} trigger="hover">
-                      <img className="link-icons" src={require('../../../img/icons/weixin.png')} alt=""/>
+                    <a href="https://twitter.com/home?lang=en" target="_blank"><img className="link-icons" src={require('../../../img/icons/twiter.png')} alt="" /></a>
+                    <a href="https://www.linkedin.com/company/%E4%BA%9A%E6%B4%B2%E6%95%B0%E5%AD%97%E7%BB%8F%E6%B5%8E%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87" target="_blank"><img className="link-icons" src={require('../../../img/icons/instagram.png')} alt="" /></a>
+                    <a href="https://weibo.com/7508227359/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank"><img className="link-icons" src={require('../../../img/icons/weibo.png')} alt="" /></a>
+                    <a href="https://www.zhihu.com/org/ya-zhou-shu-zi-jing-ji-he-zuo-zu-zhi" target="_blank"><img className="link-icons" src={require('../../../img/icons/zhihu.png')} alt="" /></a>
+                    <a href="https://www.quora.com/profile/ADEC-A" target="_blank"><img className="link-icons" src={require('../../../img/icons/Quora.png')} alt="" /></a>
+                    <Popover content={(<div className="link-qrcode" style={{ backgroundImage: `url(${require('../../../img/icons/link_qr.png')})` }} />)} trigger="hover">
+                      <img className="link-icons" src={require('../../../img/icons/weixin.png')} alt="" />
                     </Popover>
                   </Space>
                 </div>
