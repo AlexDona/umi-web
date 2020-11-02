@@ -1,0 +1,89 @@
+
+// @import "~antd/lib/style/v2-compatible-reset.less";
+
+@bottom-bar-bg-color: #262626;
+@bottom-bar-line-color: #000;
+
+@template-bg-color: #001529;
+@template-bg-color-light: #ececec;
+@template-nav-bg-color: #001529;
+@template-text-color: #ccc;
+@template-text-title-color: #bcbcbc;
+@template-text-color-light: #fff;
+@template-footer-text-color: #999;
+
+@animate-duration: .45s;
+
+@font-family: 'PingFangSC-Regular';
+body {
+  word-wrap: break-word;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* .content-wrapper > .tween-one-leaving,
+.queue-anim-leaving {
+  // position: absolute !important;
+  // width: 100%;
+} */
+
+.video {
+  max-width: 800px;
+}
+
+#react-content {
+  min-height: 100%;
+}
+.home-page-wrapper p {
+  padding: 0;
+  margin: 0;
+}
+.t-a-l {
+  text-align: left;
+}
+.t-a-c {
+  text-align: center;
+}
+.row-content {
+  padding-top: 3%;
+}
+
+
+/* IE 浏览器 */
+div {
+  /* 三角箭头的颜色 */
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 53%, 0.4);
+  }
+
+  &:hover::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 53%, 0.1);
+  }
+}

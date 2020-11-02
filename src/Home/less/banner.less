@@ -1,0 +1,121 @@
+@bottom-bar-bg-color: #262626;
+@bottom-bar-line-color: #000;
+
+@template-bg-color: #001529;
+@template-bg-color-light: #ececec;
+@template-nav-bg-color: #001529;
+@template-text-color: #ccc;
+@template-text-title-color: #bcbcbc;
+@template-text-color-light: #fff;
+@template-footer-text-color: #999;
+
+@animate-duration: .45s;
+
+@font-family: 'PingFangSC-Regular';
+
+@banner: banner;
+.@{banner} {
+  &-anim {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 64px;
+    .bg {
+      height: 100%;
+    }
+    &-anim-elem {
+      position: relative;
+    }
+    .home-title {
+      text-align: center;
+      color: @template-text-color-light;
+      font-family: @font-family;
+      min-width: 360px;
+      height: 80px;
+      position: absolute;
+      top: -18%;
+      left:0;
+      bottom: 0;
+      margin: auto;
+      right: 0;
+      z-index: 2;
+      h1 {
+        color: @template-text-color-light;
+        font-size: 40px;
+        text-shadow: 2px 3px #626971;
+      }
+      .title-en {
+        font-family: @font-family;
+        font-size: 30px;
+        text-shadow: 2px 3px #626971;
+      }
+    }
+
+  }
+  &-anim-thumb {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    right: 0;
+    width: 70px;
+    height: 100%;
+    span {
+      width: 20px;
+      height: 20px;
+      &:not(:nth-child(1)) {
+            margin-top: 20px;
+            &:hover {
+              cursor: pointer;
+              filter: brightness(1.5);
+              box-shadow: inset 46px 0 #17436c;
+            }
+      }
+    }
+    span.active {
+      background: #386d75;
+    }
+    //.thumb-box {
+    //  width: 36px;
+    //  height: 36px;
+    //  border-radius: 50%;
+    //  border: 1px solid #4d919c;
+    //  display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+    //  &:not(:nth-child(1)) {
+    //    margin-top: 30px;
+    //    &:hover {
+    //      background: green!important;
+    //      cursor: pointer;
+    //      filter: brightness(1.5);
+    //      box-shadow: inset 46px 0 #824040;
+    //    }
+    //  }
+    //  .sub-box {
+    //    width: 20px;
+    //    height: 20px;
+    //    background: #3462b5;
+    //    border-radius: 50%;
+    //    color: transparent;
+    //  }
+    //}
+    //.thumb-box-hover {
+    //  background: green !important;
+    //  cursor: pointer;
+    //  filter: brightness(1.5);
+    //  box-shadow: inset 46px 0 #824040;
+    //}
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .@{banner} {
+    background-attachment: inherit;
+    & &-text-wrapper {
+      width: 90%;
+    }
+    & &-title {
+      width: 90%;
+      left: 0;
+    }
+  }
+}

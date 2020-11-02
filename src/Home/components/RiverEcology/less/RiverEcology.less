@@ -1,0 +1,61 @@
+@import '../../../less/common';
+
+@river-ecology: river-ecology;
+.@{river-ecology} {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  color: @template-text-color-light;
+  z-index: 1;
+  .row-p {
+    font-family: @font-family;
+    margin-top: 30px;
+  }
+  h1 {
+    font-family: @font-family;
+    color: @template-text-color-light;
+  }
+  .ecology {
+    width: inherit;
+    height: inherit;
+    .ecology-pic {
+      width: 100%;
+      .pic {
+        margin-top: 34px;
+        width: 100%;
+        object-fit: cover;
+        //animation-name: updown;
+        //animation-duration: 2s;
+        //animation-iteration-count: infinite;
+        //animation-fill-mode: both;
+        //animation-timing-function: ease;
+        cursor: pointer;
+
+        &:hover {
+          animation-play-state: paused;
+          object-fit: cover;
+          transform: scale(1.1);
+          transition: all 0.45s ease;
+        }
+      }
+    }
+  }
+
+  .at {
+    width: inherit;
+    height: inherit;
+    padding-top: 30px;
+    .row-text {
+      margin-top: 50px;
+    }
+    .at-pic-content {
+      .pic {
+        max-width: 536px;
+      }
+      .pic-left {
+        padding-left: 22%;
+      }
+    }
+  }
+}

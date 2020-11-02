@@ -1,0 +1,175 @@
+@import '../../../less/common';
+
+@adec: adec;
+.@{adec} {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  color: @template-text-color-light;
+  z-index: 1;
+  h1 {
+    font-family: @font-family;
+    color: @template-text-color-light;
+  }
+  .row-p {
+    font-family: @font-family;
+    margin-top: 30px;
+  }
+  .img-content {
+    max-width: 1200px;
+    margin: 80px auto;
+    justify-content: space-between;
+    .pic {
+      //animation-name: updown;
+      //animation-duration: 2s;
+      //animation-iteration-count: infinite;
+      //animation-fill-mode: both;
+      //animation-timing-function: ease;
+      cursor: pointer;
+      margin-left: -15%;
+      &:hover {
+        animation-play-state: paused;
+        transform: scale(1.1);
+        transition: all 0.45s ease;
+      }
+    }
+
+   // @keyframes updown {
+   //   0% {
+   //     transform: translateY(10px);
+   //   }
+   //   25% {
+   //     transform: translateY(5px);
+   //   }
+   //   50% {
+   //     transform: translateY(0);
+   //   }
+   //   75% {
+   //     transform: translateY(5px);
+   //   }
+   //   100% {
+   //     transform: translateY(10px);
+   //   }
+   //}
+  }
+
+  .fade-enter {
+    opacity: 0;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+    animation-play-state: paused;
+  }
+
+  .fade-appear {
+    opacity: 0;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+    animation-play-state: paused;
+  }
+
+  .fade-leave {
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.55, 0.2);
+    animation-play-state: paused;
+  }
+
+  .fade-enter.fade-enter-active {
+    animation-name: fadeIn;
+    animation-play-state: running;
+  }
+
+  .fade-appear.fade-appear-active {
+    animation-name: fadeIn;
+    animation-play-state: running;
+  }
+
+  .fade-leave.fade-leave-active {
+    animation-name: fadeOut;
+    animation-play-state: running;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .hope {
+    width: inherit;
+    height: inherit;
+    position: relative;
+
+    .sliders {
+      margin-top: 72px;
+    }
+  }
+
+  .construct {
+    width: inherit;
+    height: inherit;
+    .pic-content {
+      max-width: 899px;
+      margin: 90px auto;
+      text-align: center;
+      img {
+        width: 270px;
+        height: 375px;
+        border-radius: 3px;
+        &:hover {
+          border: 1px solid #4cf4f1;
+        }
+      }
+    }
+  }
+
+  .teams {
+    width: inherit;
+    height: inherit;
+    .team-row-p {
+      margin-top: 15px;
+    }
+    .team-company {
+      img {
+        width: 148px;
+        height: 103px;
+      }
+    }
+  }
+
+  .basic-skill {
+    width: inherit;
+    height: inherit;
+    .basic-pic-content {
+      margin-top: 79px;
+      .basic-pic {
+        width: 248px;
+      }
+    }
+  }
+
+  .strategy {
+    width: inherit;
+    height: inherit;
+    .strategy-pic-content {
+      margin-top: 79px;
+      .strategy-pic {
+        width: 300px;
+      }
+    }
+  }
+}
