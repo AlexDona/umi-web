@@ -8,15 +8,16 @@ import QueueAnim from 'rc-queue-anim';
 // import TweenOne from 'rc-tween-one';
 import './less/Adec.less';
 import Slide from '../Slide/Slide';
+import ScrollTop from '../ScrollTop/ScrollTop';
 
 // import { isImg } from './utils';
 
 class Adec extends React.PureComponent {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   show: true,
-    // };
+    this.state = {
+      el: '.adec',
+    };
     this.imgArr = [
       { name: 'middle', src: `${require('../../../img/hope_1.png')}` },
       { name: 'end', src: `${require('../../../img/hope_4.png')}` },
@@ -30,12 +31,14 @@ class Adec extends React.PureComponent {
       { scale: 1 },
     ];
     // [
-    //   'mouseOver',
-    //   'mouseOut',
     // ].forEach((method) => this[method] = this[method].bind(this));
     this.getRotation = 0;
 
     // const transformProp = Modernizr.prefixed('transform');
+  }
+
+  componentDidMount() {
+    document.querySelector('.adec').addEventListener('scroll', this.onScroll);
   }
 
   render() {
@@ -71,7 +74,7 @@ class Adec extends React.PureComponent {
               <Parallax
                 duration={200}
                 animation={{ x: 0, opacity: 1, playScale: [0.5, 0.8] }}
-                style={{ opacity: 0 }}
+                style={{ transform: 'translateX(-100px)' }}
               >
                 <h1 className="t-a-c ">使命&愿景</h1>
               </Parallax>
@@ -91,10 +94,10 @@ class Adec extends React.PureComponent {
 
         <div className="construct">
           <QueueAnim duration={200} className="demo-page" key="page" type="bottom">
-            <Row key={1} show="true" className="row-content t-a-c" justify="center">
+            <Row show="true" className="t-a-c" justify="center">
               <Col span={10}><h1>组织架构</h1></Col>
             </Row>
-            <Row key={2} show="true" justify="center">
+            <Row justify="center">
               <Col span={10}>
                 <p className="t-a-c row-p">
                   亚洲数字经济合作组织所有组织成员均以节点形式呈现并参与协同共建，包括发起节点、联合发起节点、支持型节点等不同实体单位
@@ -116,11 +119,11 @@ class Adec extends React.PureComponent {
         </div>
 
         <div className="teams">
-          <Row show="true" className="row-content t-a-c" justify="center">
+          <Row show="true" className="t-a-c" justify="center">
             <h1>
               <Parallax
                 animation={{ x: '100px' }}
-                style={{ marginTop: 64 }}
+                style={{ }}
               >
                 <Texty>组织成员</Texty>
               </Parallax>
@@ -241,11 +244,10 @@ class Adec extends React.PureComponent {
           </Row>
         </div>
         <div className="strategy">
-          <Row show="true" className="row-content t-a-c" justify="center">
+          <Row show="true" className="t-a-c" justify="center">
             <h1>
               <Parallax
                 animation={{ }}
-                style={{ marginTop: 64 }}
               >
                 <Texty>战略布局</Texty>
               </Parallax>
@@ -254,13 +256,13 @@ class Adec extends React.PureComponent {
           <Row className="strategy-pic-content" justify="center">
             <Col span={18}>
               <Row justify="space-between">
-                <Col span={8}>
+                <Col span={8} className="t-a-c">
                   <img className="strategy-pic" src={require('../../../img/strategy1.png')} alt="" />
                 </Col>
-                <Col span={8}>
+                <Col span={8} className="t-a-c">
                   <img className="strategy-pic" src={require('../../../img/strategy2.png')} alt="" />
                 </Col>
-                <Col span={8}>
+                <Col span={8} className="t-a-c">
                   <img className="strategy-pic" src={require('../../../img/strategy3.png')} alt="" />
                 </Col>
               </Row>
@@ -269,19 +271,20 @@ class Adec extends React.PureComponent {
           <Row span={18} className="strategy-pic-content" justify="center">
             <Col span={18}>
               <Row justify="space-between">
-                <Col span={8}>
+                <Col span={8} className="t-a-c">
                   <img className="strategy-pic" src={require('../../../img/strategy4.png')} alt="" />
                 </Col>
-                <Col span={8}>
+                <Col span={8} className="t-a-c">
                   <img className="strategy-pic" src={require('../../../img/strategy5.png')} alt="" />
                 </Col>
-                <Col span={8}>
+                <Col span={8} className="t-a-c">
                   <img className="strategy-pic" src={require('../../../img/strategy6.png')} alt="" />
                 </Col>
               </Row>
             </Col>
           </Row>
         </div>
+        <ScrollTop el={this.state.el} />
       </div>
     );
   }

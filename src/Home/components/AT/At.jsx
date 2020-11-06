@@ -5,15 +5,16 @@ import 'rc-texty/assets/index.css';
 // import { Parallax, OverPack } from 'rc-scroll-anim';
 // import ScrollParallax from 'rc-scroll-anim/lib/ScrollParallax';
 import QueueAnim from 'rc-queue-anim';
-import require from 'enquire-js';
 // import TweenOne from 'rc-tween-one';
 import './less/At.less';
+import ScrollTop from "../ScrollTop/ScrollTop";
 // import Slide from '../Slide/Slide';
 
 class At extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      el: '.at',
     };
     this.timer = null;
     this.animation = [
@@ -243,6 +244,7 @@ class At extends React.Component {
             </Col>
           </Row>
         </div>
+        <ScrollTop el={this.state.el} />
       </div>
     );
   }

@@ -1,16 +1,14 @@
 import React from 'react';
 // import QueueAnim from 'rc-queue-anim';
-// import { Row, Col } from 'antd';
 import BannerAnim, { Element, Thumb } from 'rc-banner-anim';
 import TweenOne from 'rc-tween-one';
 import 'rc-banner-anim/assets/index.css';
 import './less/banner.less';
-import './less/footer.less';
+import { Col, Popover, Row, Space } from 'antd';
 import Adec from './components/Adec/Adec.jsx';
 import RiverEcology from './components/RiverEcology/RiverEcology';
 import At from './components/AT/At';
 import ContactUs from './components/ContactUs/ContactUs';
-import {Col, Popover, Row, Space} from "antd";
 
 const BgElement = Element.BgElement;
 
@@ -22,12 +20,12 @@ class Content extends React.PureComponent {
       thumbEnter: false,
     };
     this.animation = [
-      { skewX: '35deg', left: '-40%' },
-      { skewX: '-35deg', left: '40%' },
-      { skewX: 0 },
-      { top: '60px' },
-      { scale: 0.3 },
-      { scale: 1 },
+      // { skewX: '35deg', left: '-40%' },
+      // { skewX: '-35deg', left: '40%' },
+      // { skewX: 0 },
+      // { top: '60px' },
+      // { scale: 0.3 },
+      // { scale: 1 },
     ];
     [
       'onMouseEnter',
@@ -36,8 +34,7 @@ class Content extends React.PureComponent {
   }
 
   componentDidMount() {
-    console.log('scroll');
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.onScroll);
   }
 
   getNextPrevNumber() {
@@ -55,60 +52,60 @@ class Content extends React.PureComponent {
 
   onMouseEnter() {
     this.setState({
-      thumbEnter: true,
+      // thumbEnter: true,
     });
   }
 
   onMouseLeave() {
     this.setState({
-      thumbEnter: false,
+      // thumbEnter: false,
     });
   }
 
-  handleScroll = (e) => {
-    e = e || window.event;
-    let scrollTime = 0;
-    const ctx = this;
-    const clientHeight = document.documentElement.clientHeight; // 可视区域高度
-    const scrollTop = document.documentElement.scrollTop; // 滚动条滚动高度
-    const scrollHeight = document.documentElement.scrollHeight; // 滚动内容高度
-    if (scrollTop > window.innerHeight * 0.25) {
-      this.banner.next();
-    }
-
-    const t = new Date().getTime();
-    // 防止鼠标滚动太快
-    if (t - scrollTime < 1400) {
-      return !1;
-    }
-    scrollTime = t;
-
-    // 鼠标滚轮的滚动方向 >0 up;<0 down
-    if (e.wheelDelta) { // 判断浏览器IE，谷歌滑轮事件
-      if (e.wheelDelta > 0) { // 当滑轮向上滚动时
-        // 事件
-        this.banner.prev();
-      }
-      if (e.wheelDelta < 0) { // 当滑轮向下滚动时
-        // 事件
-        this.banner.next();
-      }
-    } else if (e.detail) { // Firefox滑轮事件
-      if (e.detail > 0) { // 当滑轮向上滚动时
-        // 事件
-        this.banner.prev();
-      }
-      if (e.detail < 0) { // 当滑轮向下滚动时
-        // 事件
-        this.banner.next();
-      }
-    }
-  };
+  // handleScroll = (e) => {
+  //   e = e || window.event;
+  //   let scrollTime = 0;
+  //   const ctx = this;
+  //   const clientHeight = document.documentElement.clientHeight; // 可视区域高度
+  //   const ScrollTop.jsx = document.documentElement.ScrollTop.jsx; // 滚动条滚动高度
+  //   const scrollHeight = document.documentElement.scrollHeight; // 滚动内容高度
+  //   if (ScrollTop.jsx > window.innerHeight * 0.25) {
+  //     this.banner.next();
+  //   }
+  //
+  //   const t = new Date().getTime();
+  //   // 防止鼠标滚动太快
+  //   if (t - scrollTime < 1400) {
+  //     return !1;
+  //   }
+  //   scrollTime = t;
+  //
+  //   // 鼠标滚轮的滚动方向 >0 up;<0 down
+  //   if (e.wheelDelta) { // 判断浏览器IE，谷歌滑轮事件
+  //     if (e.wheelDelta > 0) { // 当滑轮向上滚动时
+  //       // 事件
+  //       this.banner.prev();
+  //     }
+  //     if (e.wheelDelta < 0) { // 当滑轮向下滚动时
+  //       // 事件
+  //       this.banner.next();
+  //     }
+  //   } else if (e.detail) { // Firefox滑轮事件
+  //     if (e.detail > 0) { // 当滑轮向上滚动时
+  //       // 事件
+  //       this.banner.prev();
+  //     }
+  //     if (e.detail < 0) { // 当滑轮向下滚动时
+  //       // 事件
+  //       this.banner.next();
+  //     }
+  //   }
+  // };
 
   render() {
     const { dataSource, isMobile, ...props } = this.props;
     const thumbChildren = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i += 1) {
       thumbChildren.push(
         <div key={i} className="thumb-box">
           <div className="sub-box" />
@@ -129,14 +126,14 @@ class Content extends React.PureComponent {
         <Element
           prefixCls="banner-user-elem"
           key="0"
-          followParallax={{
-            delay: 1000,
-            data: [
-              { id: 'bg', value: 20, bgPosition: '50%', type: ['backgroundPositionX'] },
-              { id: 'title', value: 50, type: 'x' },
-              { id: 'content', value: -30, type: 'x' },
-            ],
-          }}
+          // followParallax={{
+          //   delay: 1000,
+          //   data: [
+          //     { id: 'bg', value: 20, bgPosition: '50%', type: ['backgroundPositionX'] },
+          //     { id: 'title', value: 50, type: 'x' },
+          //     { id: 'content', value: -30, type: 'x' },
+          //   ],
+          // }}
         >
           <div className="home-title">
             <TweenOne
@@ -145,8 +142,7 @@ class Content extends React.PureComponent {
               paused={this.props.paused}
               repeat={0} // demo 演示需要，时间轴循环
               yoyo // demo 演示需要，时间轴循环
-              style={{ transform: 'scale(1)' }}
-              className="code-box-shape"
+              style={{ transform: 'scale(1)', height: '100%' }}
             >
               <h1 id="title">数字赋能，世界实体</h1>
               <div id="content" className="title-en">Digitalize A New Asia</div>
@@ -255,6 +251,7 @@ class Content extends React.PureComponent {
           <ContactUs key="contactUs" />
         </Element>
       </BannerAnim>
+
     );
   }
 }

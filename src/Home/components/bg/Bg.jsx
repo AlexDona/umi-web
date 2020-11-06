@@ -18,7 +18,7 @@ class Bg extends React.PureComponent {
 
   componentWillUnmount() {
     try {
-      console.log(this.state.renderer.context);
+      // console.log(this.state.renderer.context);
       this.state.renderer.getContext().getExtension('WEBGL_lose_context').loseContext();
     } catch (e) {
       console.error(e);

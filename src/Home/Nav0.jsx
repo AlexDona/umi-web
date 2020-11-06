@@ -5,9 +5,8 @@ import { DownOutlined } from '@ant-design/icons';
 import { getChildrenToRender } from './utils';
 
 const { Item, SubMenu } = Menu;
-const url = require('../static/img/qrcode.png');
 const content = (
-  <div style={{padding: '15px', background: '#fff'}}>
+  <div style={{ padding: '15px', background: '#fff' }}>
     <img className="pic" src={require('../img/qrcode.png')} alt="" />
   </div>
 );

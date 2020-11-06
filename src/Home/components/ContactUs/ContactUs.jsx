@@ -96,18 +96,18 @@ class ContactUs extends React.Component {
                 <div className="link-title">支持机构</div>
                 <div className="links">
                   <Space size="middle">
-                    <a href="">亚洲财经</a>
-                    <a href=""> 中国银行</a>
-                    <a href=""> 关注我们</a>
-                    <a href=""> 新华网</a>
-                    <a href="">人民网</a>
-                    <a href="">环球网</a>
-                    <a href="">工商银行</a>
-                    <a href=""> 招商银行</a>
-                    <a href=""> 中国平安</a>
-                    <a href=""> 凤凰网财经</a>
-                    <a href=""> 网易财经</a>
-                    <a href=""> 中国经济时报</a>
+                    <a href="http://www.affta.cn" target="_blank">亚洲财经</a>
+                    <a href="https://www.boc.cn/" target="_blank"> 中国银行</a>
+                    <a href="#" target="_blank"> 关注我们</a>
+                    <a href="http://www.xinhuanet.com" target="_blank"> 新华网</a>
+                    <a href="http://www.people.com.cn" target="_blank">人民网</a>
+                    <a href="https://www.huanqiu.com" target="_blank">环球网</a>
+                    <a href="http://www.icbc.com.cn/icbc/" target="_blank">工商银行</a>
+                    <a href="https://www.cmbchina.com" target="_blank"> 招商银行</a>
+                    <a href="https://www.pingan.com" target="_blank"> 中国平安</a>
+                    <a href="https://finance.ifeng.com" target="_blank"> 凤凰网财经</a>
+                    <a href="https://money.163.com" target="_blank"> 网易财经</a>
+                    <a href="http://jjsb.cet.com.cn" target="_blank"> 中国经济时报</a>
                   </Space>
                 </div>
               </Col>
@@ -116,7 +116,7 @@ class ContactUs extends React.Component {
                 <div className="links row-p">
                   <Space size="middle">
                     <a href="https://twitter.com/home?lang=en" target="_blank"><img className="link-icons" src={require('../../../img/icons/twiter.png')} alt="" /></a>
-                    <a href="https://www.linkedin.com/company/%E4%BA%9A%E6%B4%B2%E6%95%B0%E5%AD%97%E7%BB%8F%E6%B5%8E%E5%90%88%E4%BD%9C%E7%BB%84%E7%BB%87" target="_blank"><img className="link-icons" src={require('../../../img/icons/instagram.png')} alt="" /></a>
+                    <a href="https://www.instagram.com/adec_info/" target="_blank"><img className="link-icons" src={require('../../../img/icons/instagram.png')} alt="" /></a>
                     <a href="https://weibo.com/7508227359/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank"><img className="link-icons" src={require('../../../img/icons/weibo.png')} alt="" /></a>
                     <a href="https://www.zhihu.com/org/ya-zhou-shu-zi-jing-ji-he-zuo-zu-zhi" target="_blank"><img className="link-icons" src={require('../../../img/icons/zhihu.png')} alt="" /></a>
                     <a href="https://www.quora.com/profile/ADEC-A" target="_blank"><img className="link-icons" src={require('../../../img/icons/Quora.png')} alt="" /></a>
