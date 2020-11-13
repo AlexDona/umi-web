@@ -50,15 +50,10 @@ class ContactUs extends React.Component {
           <Row className="row-p" justify="center">
             <Col span={15}>
               <h1 className="t-a-c">
-                <Texty>
+                <Texty style={{fontSize: '28px'}}>
                   联系我们
                 </Texty>
               </h1>
-            </Col>
-          </Row>
-          <Row justify="center">
-            <Col span={15}>
-              <h5 className="t-a-c">办公场地</h5>
             </Col>
           </Row>
         </QueueAnim>
@@ -67,22 +62,22 @@ class ContactUs extends React.Component {
         </div>
         <div className="address">
           <Row justify="center">
-            <Col span={15}>
-              <h5 className="t-a-c">
+            <Col span={12}>
+              <h5>
                 总部地址：中国·深圳 南山区深南大道9018号华侨城大厦25层
               </h5>
             </Col>
           </Row>
           <Row justify="center">
-            <Col span={15}>
-              <h5 className="t-a-c">
+            <Col span={12}>
+              <h5>
                 电话：86）0755-888-888
               </h5>
             </Col>
           </Row>
           <Row justify="center" className="email">
-            <Col span={15}>
-              <h5 className="t-a-c">
+            <Col span={12}>
+              <h5>
                 邮箱：info@dgt.asia
               </h5>
             </Col>
@@ -103,6 +98,10 @@ class ContactUs extends React.Component {
                     <a href="http://www.people.com.cn" target="_blank">人民网</a>
                     <a href="https://www.huanqiu.com" target="_blank">环球网</a>
                     <a href="http://www.icbc.com.cn/icbc/" target="_blank">工商银行</a>
+                  </Space>
+                </div>
+                <div className="links">
+                  <Space size="middle">
                     <a href="https://www.cmbchina.com" target="_blank"> 招商银行</a>
                     <a href="https://www.pingan.com" target="_blank"> 中国平安</a>
                     <a href="https://finance.ifeng.com" target="_blank"> 凤凰网财经</a>

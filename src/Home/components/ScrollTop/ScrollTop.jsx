@@ -39,7 +39,7 @@ class ScrollTop extends React.PureComponent {
               <div style={{
                 width: '60px',
                 height: '60px',
-                background: '#134f80',
+                background: 'rgba(19, 79, 128, 0.6)',
                 color: '#fff',
                 position: 'fixed',
                 bottom: '12%',

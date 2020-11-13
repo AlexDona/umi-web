@@ -4,7 +4,7 @@
 .@{at} {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   color: @template-text-color-light;
   z-index: 1;
@@ -31,8 +31,23 @@
       margin-top: 50px;
     }
     .at-pic-content {
-      .pic {
-        max-width: 536px;
+      padding: 21px 35px;
+      background: rgba(8, 24, 54, 0.73);
+      .at-list {
+        width: 526px;
+        height: 116px;
+        display: flex;
+        padding-left: 31px;
+        align-items: center;
+        background: rgba(24, 40, 85, 0.75);
+        border-radius: 6px;
+        .pic {
+          width: 61px;
+          height: 61px;
+        }
+        .at-list-text {
+          padding-left: 29px;
+        }
       }
       .pic-right {
         text-align: right;
@@ -45,33 +60,66 @@
     width: inherit;
     //height: inherit;
     padding-top: 30px;
-    .pic-left2 {
-      position: relative;
-      text-align: center;
-    }
-    &-pic {
-      flex-wrap: nowrap;
-      justify-content: space-evenly;
-     .pic {
-       width: 270px;
-       object-fit: cover;
-     }
-      .pic2 {
-        overflow: hidden;
-        width: 206px;
-        object-fit: cover;
+    .card1 {
+      padding: 28px 12px;
+      background: rgba(24, 40, 85, 0.75);
+      border-radius: 6px;
+      font-size: 18px;
+      .card1-icons {
+        display: flex;
+        .card1-icons-list {
+          display: flex;
+          flex: 1;
+          align-items: center;
+          img {
+            width: 61px;
+            height: 61px;
+          }
+          .text {
+            padding-left: 24px;
+          }
+        }
       }
     }
+    .card2-reits {
+      background: rgba(24, 40, 85, 0.75);
+      border-radius: 6px;
+      padding: 28px 12px;
+      font-size: 18px;
+      margin-top: 32px;
+      .at-content2-pic {
+        .card2-reits-card {
+          width: 205px;
+          background: rgba(24, 40, 85, 0.73);
+          border-radius: 6px;
+          .pic {
+            width: 100%;
+            height: 164px;
+          }
+          .card-text {
+            height: 130px;
+            padding: 13px 7px;
+          }
+        }
+      }
+    }
+    .card3 {
+      margin-top: 32px;
+      padding: 28px 12px;
+      background: rgba(24, 40, 85, 0.73);
+      border-radius: 6px;
+      font-size: 18px;
+    }
     .icons {
-      width: 76px;
+      width: 61px;
     }
   }
 
   @first: first;
   .@{first} {
     width: inherit;
-    height: inherit;
     padding-top: 30px;
+    margin-bottom: 130px;
     &-icon {
       width: 77px;
       object-fit: cover;
@@ -80,8 +128,9 @@
         transition: all 0.45s ease;
       }
     }
-    &-pic {
+    &-card-list {
       width: 300px;
+      border-radius: 10px;
       &:hover {
         cursor: pointer;
         animation-play-state: paused;
@@ -89,10 +138,28 @@
         transition: all 0.45s ease;
       }
     }
-    .text-align {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    &-card-text {
+      height: 161px;
+      padding: 16px 0 0 31px;
+      background: rgba(17, 54, 75, 0.75);
+      border-radius: 0 0 10px 10px;
+    }
+    &-pic {
+      width: 300px;
+    }
+    .measure-card {
+      background: rgba(8, 24, 54, 0.84);
+      border-radius: 6px;
+      font-size: 18px;
+      padding: 26px 43px;
+      margin-top: 35px;
+      .measure-card-text {
+        width: 231px;
+        margin-top: 33px;
+      }
+      .measure-icons {
+        margin-top: 69px;
+      }
     }
   }
 }

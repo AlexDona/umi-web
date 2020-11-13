@@ -2,6 +2,7 @@ import React from 'react';
 
 import * as THREE from '@/build/three.module.js';
 import './less/Bg.less';
+// import videoUrl from '../../../../public/video.mp4';
 // import Stats from './jsm/libs/stats.module.js';
 
 class Bg extends React.PureComponent {
@@ -31,8 +32,8 @@ class Bg extends React.PureComponent {
   }
 
   renderBackground() {
-    const SEPARATION = 80; const AMOUNTX = 170; const
-      AMOUNTY = 165;
+    const SEPARATION = 60; const AMOUNTX = 66; const
+      AMOUNTY = 66;
 
     let container;
     // let stats = Stats;
@@ -186,6 +187,7 @@ class Bg extends React.PureComponent {
 
     return (
       <div className="canvas">
+        {/* <video controls className="img" src={videoUrl} /> */}
         <div className="img" style={{ backgroundImage: `url(${require('../../../img/earth.gif')})` }} alt="" />
       </div>
     );

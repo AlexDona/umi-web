@@ -4,7 +4,6 @@ import BannerAnim, { Element, Thumb } from 'rc-banner-anim';
 import TweenOne from 'rc-tween-one';
 import 'rc-banner-anim/assets/index.css';
 import './less/banner.less';
-import { Col, Popover, Row, Space } from 'antd';
 import Adec from './components/Adec/Adec.jsx';
 import RiverEcology from './components/RiverEcology/RiverEcology';
 import At from './components/AT/At';
@@ -15,8 +14,9 @@ const BgElement = Element.BgElement;
 class Content extends React.PureComponent {
   constructor(props) {
     super(props);
+    console.log(this.props.selectedItem, 'props');
     this.state = {
-      intShow: 0,
+      index: 0,
       thumbEnter: false,
     };
     this.animation = [
@@ -30,12 +30,14 @@ class Content extends React.PureComponent {
     [
       'onMouseEnter',
       'onMouseLeave',
+      'getCurrentShow',
     ].forEach((method) => this[method] = this[method].bind(this));
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.onScroll);
   }
+
 
   getNextPrevNumber() {
     let nextInt = this.state.intShow + 1;
@@ -62,14 +64,31 @@ class Content extends React.PureComponent {
     });
   }
 
-  // handleScroll = (e) => {
+  getCurrentShow() {
+    console.log(this.banner.currentShow);
+  }
+
+  getInitShow(type, initShow) { // 根据type判断轮播的index位置
+    if (type === 'after') {
+      initShow += 1;
+    } else {
+      initShow -= 1;
+      this.setState({
+        initShow: initShow
+      })
+    }
+    return this.props.getInitShow(initShow);
+  }
+
+  // onScroll = (e) => {
+  //   console.log('scroll');
   //   e = e || window.event;
   //   let scrollTime = 0;
   //   const ctx = this;
   //   const clientHeight = document.documentElement.clientHeight; // 可视区域高度
-  //   const ScrollTop.jsx = document.documentElement.ScrollTop.jsx; // 滚动条滚动高度
+  //   const ScrollTop = document.documentElement.ScrollTop; // 滚动条滚动高度
   //   const scrollHeight = document.documentElement.scrollHeight; // 滚动内容高度
-  //   if (ScrollTop.jsx > window.innerHeight * 0.25) {
+  //   if (ScrollTop > window.innerHeight * 0.25) {
   //     this.banner.next();
   //   }
   //
@@ -117,11 +136,13 @@ class Content extends React.PureComponent {
     return (
       <BannerAnim prefixCls="banner-user"
         type="gridBar"
+        dragPlay={false}
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
         ref={(c) => { this.banner = c; }}
         arrow={false}
         initShow={0}
+        onChange={(_) => { this.getCurrentShow(_); }}
       >
         <Element
           prefixCls="banner-user-elem"

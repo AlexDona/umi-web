@@ -20,17 +20,33 @@
     height: inherit;
     .ecology-pic {
       width: 100%;
-      .pic {
-        margin-top: 34px;
-        width: 100%;
-        object-fit: cover;
-        //animation-name: updown;
-        //animation-duration: 2s;
-        //animation-iteration-count: infinite;
-        //animation-fill-mode: both;
-        //animation-timing-function: ease;
+      .ecology-content {
+        display: flex;
+        margin-top: 10px;
+        padding-left: 31px;
+        align-content: center;
+        height: 116px;
         cursor: pointer;
-
+        background: #0D1C49;
+        opacity: 0.84;
+        border-radius: 6px;
+        .pic {
+          margin-top: 34px;
+          width: 61px;
+          height: 61px;
+          object-fit: cover;
+          //animation-name: updown;
+          //animation-duration: 2s;
+          //animation-iteration-count: infinite;
+          //animation-fill-mode: both;
+          //animation-timing-function: ease;
+        }
+        .ecology-text {
+          padding-left: 42px;
+          align-self: center;
+          font-size: 18px;
+          max-width: 831px;
+        }
         &:hover {
           animation-play-state: paused;
           object-fit: cover;
@@ -38,6 +54,7 @@
           transition: all 0.45s ease;
         }
       }
+
     }
   }
 

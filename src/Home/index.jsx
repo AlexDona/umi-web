@@ -23,12 +23,15 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.dom = '';
+    this.initShow = null;
     this.state = {
       isMobile,
       show: !location.port, // 如果不是 dva 2.0 请删除
     };
     [
       'getNode',
+      'getSelectedItem',
+      'getInitShow',
     ].forEach(method => this[method] = this[method].bind(this));
   }
 
@@ -55,6 +58,16 @@ export default class Home extends React.Component {
     return this.ref;
   }
 
+  getSelectedItem(selectedItem) {
+    this.initShow = selectedItem;
+    // this.state.selectedKey = selectedItem;
+  }
+
+  getInitShow(initShow) {
+    console.log('9j9', initShow);
+    return initShow;
+  }
+
   render() {
     const children = [
       <Nav0
@@ -63,10 +76,12 @@ export default class Home extends React.Component {
         dataSource={Nav00DataSource}
         isMobile={this.state.isMobile}
         context={this.getNode}
+        getSelectedItem={this.getSelectedItem}
       />,
       <Content
         key="Content"
         ref={ref => this.ref = ref}
+        getInitShow={this.getInitShow}
       />,
       <Bg key="bg" context={this.getNode} />,
     ];

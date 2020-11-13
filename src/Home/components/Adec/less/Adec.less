@@ -4,7 +4,7 @@
 .@{adec} {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: auto;
   color: @template-text-color-light;
   z-index: 1;
@@ -12,13 +12,9 @@
     font-family: @font-family;
     color: @template-text-color-light;
   }
-  .row-p {
-    font-family: @font-family;
-    margin-top: 30px;
-  }
   .img-content {
     max-width: 1200px;
-    margin: 80px auto;
+    margin: 0 auto;
     justify-content: space-between;
     .pic {
       //animation-name: updown;
@@ -110,10 +106,47 @@
     }
   }
 
+  .hope-mission {
+    width: inherit;
+    height: inherit;
+    .list {
+      .list-content {
+        display: flex;
+        padding: 24px 0 32px 28px;
+        background: #0D1C49;
+        opacity: 0.84;
+        border-radius: 6px;
+        font-size: 18px;
+        margin-bottom: 11px;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        .list-text {
+          align-self: center;
+          margin-left: 48px;
+        }
+      }
+    }
+  }
+
   .hope {
     width: inherit;
     height: inherit;
     position: relative;
+    .hope-content {
+      width: 270px;
+      background: #182855;
+      opacity: 0.8;
+      border-radius: 6px;
+      img {
+        width: 100%;
+        height: 216px;
+      }
+      .hope-text {
+        padding: 42px 0 36px 0;
+      }
+    }
 
     .sliders {
       margin-top: 72px;
@@ -124,15 +157,29 @@
     width: inherit;
     height: inherit;
     .pic-content {
-      max-width: 899px;
-      margin: 90px auto;
+      width: 899px;
+      margin: 32px auto;
       text-align: center;
-      img {
+      .text-indent {
+        padding-left: 20px;
+      }
+      .pic-card {
         width: 270px;
-        height: 375px;
-        border-radius: 3px;
+        padding: 53px 0;
+        margin: 0 auto;
+        background: linear-gradient(to top, #0b1d54, rgba(0, 0, 0, 0.045));
+        opacity: 0.9;
         &:hover {
           border: 1px solid #4cf4f1;
+        }
+        img {
+          width: 103px;
+          height: 103px;
+          margin-bottom: 98px;
+          //border-radius: 3px;
+        }
+        .text {
+          margin-top: 15px;
         }
       }
     }
@@ -143,11 +190,16 @@
     height: inherit;
     .team-row-p {
       margin-top: 15px;
+      font-size: 18px;
     }
     .team-company {
-      img {
-        width: 148px;
-        height: 103px;
+      .img-content {
+        padding: 14px;
+        background: rgba(47, 68, 127, 0.6);
+        img {
+          width: 148px;
+          height: 103px;
+        }
       }
     }
   }
@@ -156,9 +208,8 @@
     width: inherit;
     height: inherit;
     .basic-pic-content {
-      margin-top: 79px;
-      .basic-pic {
-        width: 248px;
+      .list-title {
+        font-size: 24px;
       }
     }
   }
@@ -168,8 +219,27 @@
     height: inherit;
     .strategy-pic-content {
       margin-top: 79px;
-      .strategy-pic {
+      .strategy-card {
         width: 300px;
+        border-radius: 6px;
+        .strategy-pic {
+          height: 199px;
+        }
+        .strategy-text {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          width: inherit;
+          height: 90px;
+          margin: 0 auto;
+          padding: 27px 0 30px 0;
+          font-size: 18px;
+          background: #182855;
+          opacity: 0.8;
+          .text-content {
+            align-self: center;
+          }
+        }
       }
     }
   }

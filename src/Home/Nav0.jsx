@@ -16,8 +16,13 @@ class Header extends React.Component {
     super(props);
     this.state = {
       phoneOpen: undefined,
+      selectedItem: ['item0'],
     };
     ['handleHref'].forEach((method) => this[method] = this[method].bind(this));
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    this.props.getSelectedItem(this.state.selectedItem);
   }
 
   phoneClick = () => {
@@ -27,7 +32,10 @@ class Header extends React.Component {
     });
   };
 
-  handleHref(name) {
+  handleHref(name) { // 点击导航时设置banner跳转
+    this.setState({
+      selectedItem: name.key
+    })
     this.props.context().banner.slickGoTo(+/\d/.exec(name.key)[0]);
   }
 
@@ -131,14 +139,15 @@ class Header extends React.Component {
           >
             <Menu
               mode={isMobile ? 'inline' : 'horizontal'}
-              defaultSelectedKeys={['item0']}
+              defaultSelectedKeys={this.state.selectedItem}
               theme="dark"
             >
               {navChildren}
             </Menu>
             <Dropdown className="download" overlay={content}>
               <Button
-                type="primary">
+                type="primary"
+              >
                 下载河图
                 <DownOutlined />
               </Button>

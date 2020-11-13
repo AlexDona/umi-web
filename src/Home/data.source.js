@@ -1,10 +1,11 @@
 import React from 'react';
+
 export const Nav00DataSource = {
   wrapper: { className: 'header0 home-page-wrapper' },
   page: { className: 'home-page' },
   logo: {
     className: 'header0-logo',
-    children: require('../img/logo.png'),
+    children: require('../img/logo.svg'),
   },
   Menu: {
     className: 'header0-menu',
@@ -18,7 +19,7 @@ export const Nav00DataSource = {
             {
               children: (
                 <span>
-                  <p>首页</p>
+                  <p style={{ fontSize: '18px' }}>首页</p>
                 </span>
               ),
               name: 'text',
@@ -86,7 +87,7 @@ export const Nav00DataSource = {
             {
               children: (
                 <span>
-                  <p>ADEC</p>
+                  <p style={{ fontSize: '18px' }}>ADEC</p>
                 </span>
               ),
               name: 'text',
@@ -103,7 +104,7 @@ export const Nav00DataSource = {
             {
               children: (
                 <span>
-                  <p>河图生态</p>
+                  <p style={{ fontSize: '18px' }}>河图生态</p>
                 </span>
               ),
               name: 'text',
@@ -121,7 +122,7 @@ export const Nav00DataSource = {
               children: (
                 <span>
                   <span>
-                    <p>数字赋能</p>
+                    <p style={{ fontSize: '18px' }}>数字赋能</p>
                   </span>
                 </span>
               ),
@@ -141,7 +142,7 @@ export const Nav00DataSource = {
               children: (
                 <span>
                   <span>
-                    <p>关于我们</p>
+                    <p style={{ fontSize: '18px' }}>关于我们</p>
                   </span>
                 </span>
               ),
@@ -150,7 +151,7 @@ export const Nav00DataSource = {
             },
           ],
         },
-      }
+      },
     ],
   },
   mobileMenu: { className: 'header0-mobile-menu' },
